@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Rating Form</title>
+      <link rel="stylesheet" href="Rating 1.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+      <script>
+         function validateForm()
+         {
+             console.log("validate");
+             var q1=document.getElementById("ques1").value;
+             if (q1==""){ 
+                         alert("Please mention whether have you used the product for a week !")  
+                         return false;
+                     }
+                    if(q1.search(/[y,e,s,n,o]/)==-1){
+                         alert("Please enter only yes/no")
+                         return false;
+                     }
+                     if(q1.search(/[yes,no]/)==-1){
+                         alert("Please enter only yes/no")
+                         return false;
+                     }
+                     if(q1=="no"){
+                         alert("Please come and rate the product after using it for a week !")
+                         return false;
+                     }
+                     if (q1=="yes"){ 
+                     let r = confirm("Click ok to rate the product");
+                     if(r == true){ console.log("true"); setTimeout(() =>{window.location.href ="Rating2.html";},10)}
+                     }
+         }
+       </script>
+   </head>
+   
+   <body>
+      <div class="container">
+         <header>Answer the question to rate the product !!</header><br>
+         <div class="form-outer">
+            <form id="validate" method="post" onsubmit="validateForm()">
+                    <div class="page slide-page">
+                  <div class="field">
+                     <div class="label">
+                        <h3> Q). &nbsp; Have you used the product for seven days ?</h3><br>
+                        <input type="text" id="ques1" placeholder="yes / no in lowercase"> <br><br><br>
+                     </div>
+                  </div>
+                  <div class="field">
+                    <button class="button">Submit</button>
+                  </div>
+               </div>
+   </body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+  }
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: url("bg.png"), -webkit-linear-gradient(bottom, rgb(81, 83, 177),black);
+  }
+.container{
+    width: 340px;
+    height: 350px;
+    background: #fff;
+    text-align: left;
+    border-radius: 5px;
+    padding: 25px 35px 10px 35px;
+ }
+  
+.container header{
+    font-size: 25px;
+    font-weight: 600;
+    text-align: left;
+    margin: 20px 0 30px 0;
+}
+.label input[type="text"], input[type="password"]
+{
+    border:none;
+    border-bottom: 1px solid rgb(199, 33, 33);
+    margin-left: 4px;
+    background: transparent;
+    outline: none;
+    text-align: center;
+    height: 20px;
+    color: rgb(53, 216, 20);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.btn
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    width:150px;
+    background:#fb2525 ;
+    color:#fff;
+    margin-left: 25%;
+    font-size: 18px;
+    border-radius: 20px;    
+}
+.button{
+    width: 40%;
+    height: 50px;
+    border: none;  
+    outline: none;
+    background: #d33f8d;
+    margin: 20px 90px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-right: 50%;
+  }
+.button:hover{
+    cursor: pointer;
+    background: #000;
+  }
+  
+ 

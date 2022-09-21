@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+
+}
+*{font-family: 'Rubik', sans-serif;
+    font-style: normal;
+}
+ a{
+     background-color: darkblue;
+    color:white;
+}
+
+html{
+    background-color: #fff;
+    color:black;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    
+ 
+}
+.logo{
+    margin: 7px 10px;
+    float: left;
+}
+.navigation{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:darkblue;
+}
+.navigation a{
+  position:sticky;
+  margin-bottom: 40px;
+  float:right;
+  color:white;
+  text-align: centre;
+  padding-top: 15px;
+  text-decoration: none;
+  font-size: 20px;
+
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-right: 40px;
+} 
+
+.navigation a:hover{
+    background-color:white;
+    color:darkblue;
+}
+
+.main h1 {
+    padding: 0;
+    margin-top: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-image: url(04_howtobuy_img_04.webp);
+    background-size: cover;
+    background-position-x: center;
+    position: relative;
+    height: 160px;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 4.5px;
+    word-spacing: 6.5px;
+
+
+}
+
+.main {
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    padding-left: 40px;
+    display: flex;
+    flex-direction:row;
+   
+   
+}
+.cont_left{
+    margin-top: 40px;
+    border: 0px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+padding-left: 60px;
+
+    align-content: center;
+
+   
+    padding-bottom: 40px;
+}
+
+
+
+.cont_left>img{
+    
+margin-top: 40px;
+border: 0px;
+border-radius: 10px;
+overflow: hidden;
+
+align-content: center;
+height: 400px;
+width: 300px;
+padding-bottom: 40px;
+}
+
+.cont_center{
+    margin-top: 100px;
+    margin-left: 80px;
+    padding-top: 10px;
+    text-align:justify;
+    padding-left: 300px;
+
+    
+
+}
+button{
+    background-color:darkblue;
+    color: white;
+    padding: 12px 38px;
+    font-weight: 400;
+    font-size: 16px;
+    border: 2px solid var(--blue);
+    border-radius: 24px;
+    cursor: pointer;
+    margin: auto; 
+    text-transform: uppercase;
+}
+button:hover{
+    
+    color:darkblue;
+    font-weight: 600;
+
+}
+p{
+    font-size: 25px;
+    
+}
+ul{
+    font-size:50pxpx;
+}
+h6{
+    font-size:30px;
+  text-decoration: line-through;
+
+}
+h5{background-color:#E0FFFF;
+color: darkblue;
+padding: 20px;
+font-size: 20px;
+}
+
+
+div.gallery {
+display: flex;
+justify-content: left;
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: right;
+   
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 0.1px;
+    height: 50px;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+                                                                        

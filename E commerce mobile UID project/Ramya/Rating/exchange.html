@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Exchange Form</title>
+      <link rel="stylesheet" href="exchange.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+      <div class="container">
+         <header>Exchange Form</header>
+         <div class="progress-bar">
+            <div class="step">
+               <p>
+                  Name
+               </p>
+               <div class="bullet">
+                  <span>1</span>
+               </div>
+               <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+               <p>
+                  Contact
+               </p>
+               <div class="bullet">
+                  <span>2</span>
+               </div>
+               <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+               <p>
+                  Model
+               </p>
+               <div class="bullet">
+                  <span>3</span>
+               </div>
+               <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+               <p>
+                  Submit
+               </p>
+               <div class="bullet">
+                  <span>4</span>
+               </div>
+               <div class="check fas fa-check"></div>
+            </div>
+         </div>
+         <div class="form-outer">
+            <form action="#">
+               <div class="page slide-page">
+                  <div class="title">
+                     Basic Info:
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        Does your phone switch on?
+                     </div>
+                     <select id="dropdown">
+                        <option value="yes"></option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                     </select>
+                     <script>
+                        function find(){
+                    var loc;
+                    var star;
+                    loc=document.getElementById("dropdown").value;
+                   
+                    if(document.getElementById("dropdown").value=="yes")
+                    {
+                     const slidePage = document.querySelector(".slide-page");
+const nextBtnFirst = document.querySelector(".firstNext");
+const prevBtnSec = document.querySelector(".prev-1");
+const nextBtnSec = document.querySelector(".next-1");
+const prevBtnThird = document.querySelector(".prev-2");
+const nextBtnThird = document.querySelector(".next-2");
+const prevBtnFourth = document.querySelector(".prev-3");
+const submitBtn = document.querySelector(".submit");
+const progressText = document.querySelectorAll(".step p");
+const progressCheck = document.querySelectorAll(".step .check");
+const bullet = document.querySelectorAll(".step .bullet");
+let current = 1;
+
+nextBtnFirst.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-25%";
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+});
+nextBtnSec.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-50%";
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+});
+nextBtnThird.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-75%";
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+});
+submitBtn.addEventListener("click", function(){
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+  setTimeout(function(){
+    alert("Your Form Successfully Signed up");
+    location.reload();
+  },800);
+});
+
+prevBtnSec.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "0%";
+  bullet[current - 2].classList.remove("active");
+  progressCheck[current - 2].classList.remove("active");
+  progressText[current - 2].classList.remove("active");
+  current -= 1;
+});
+prevBtnThird.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-25%";
+  bullet[current - 2].classList.remove("active");
+  progressCheck[current - 2].classList.remove("active");
+  progressText[current - 2].classList.remove("active");
+  current -= 1;
+});
+prevBtnFourth.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-50%";
+  bullet[current - 2].classList.remove("active");
+  progressCheck[current - 2].classList.remove("active");
+  progressText[current - 2].classList.remove("active");
+  current -= 1;
+});
+                    }
+                    if(loc=="no"){
+                     alert("Sorry Your Phone can't be returned");
+                                     
+                    }
+                    }
+                     </script>
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        Do you want to return your charger too?
+                     </div>
+                     <select>
+                        <option value="yes"></option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                     </select> 
+                  </div>
+                  <div class="field">
+                     <button class="firstNext next" onclick="find()">Next</button>
+                  </div>
+               </div>
+               <div class="page">
+                  <div class="title">
+                     Contact Info:
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        Enter the IMEI number of the Phone 
+                     </div>
+                     <input type="text">
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        How many years old is your Phone?
+                     </div>
+                     <input type="Number">
+                  </div>
+                  <div class="field btns">
+                     <button class="prev-1 prev">Previous</button>
+                     <button class="next-1 next">Next</button>
+                  </div>
+               </div>
+               <div class="page">
+                  <div class="title">
+                     Which Phone do You have?
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        Select the phone
+                     </div>
+                     <select>
+                        <option value="Iphone"></option>
+  <option value="Iphone 6">Iphone 6(₹6000)</option>
+  <option value="Iphone 6s">Iphone 6s(₹6500)</option>
+  <option value="Iphone 7">Iphone 7(₹7000)</option>
+  <option value="Iphone 7 plus">Iphone 7 plus(₹8000)</option>
+  <option value="Iphone X">Iphone X(₹9000)</option>
+  <option value="Iphone Se">Iphone Se(₹8500)</option>
+  <option value="J2">Samsung galaxy J2(₹5000)</option>
+  <option value="J7 prime">Samsung galaxy J7 prime(₹5200)</option>
+  <option value="m31">Samsung galaxy M31(₹5500)</option>
+  <option value="note 10">Samsung galaxy A50(₹8000)</option>
+  <option value="note 10 plus">Samsung F62(₹7000)</option>
+  <option value="S10 plus">Samsung galaxy M62(₹8500)</option>
+  <option value="Oneplus 6T">Oneplus 6T(₹6500)</option>
+  <option value="Oneplus 7">Oneplus 7((₹8000)</option>
+  <option value="Oneplus 7 pro">Oneplus 7 pro(₹15000)</option>
+  <option value="Oneplus 7T">Oneplus 7T(₹12000)</option>
+  <option value="Oneplus nord">Oneplus nord(₹9000)</option>
+                     </select>
+                     </div>
+                    
+                  <div class="field btns">
+                     <button class="prev-2 prev">Previous</button>
+                     <button class="next-2 next">Next</button>
+                  </div>
+               </div>
+               
+               <div class="page">
+                  <div class="title">
+                     Login Details:
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        Username
+                     </div>
+                     <input type="text">
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        Password
+                     </div>
+                     <input type="password">
+                  </div>
+                  <div class="field btns">
+                     <button class="prev-3 prev">Previous</button>
+                     <button class="submit">Submit</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Gadegetza signup</title>
+        <link rel="stylesheet" type="text/css" href="signup.css">
+        <link rel="icon" href="logo (1).ico">
+        <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+        <script>
+            function validateForm()
+            {
+                console.log("validate");
+                var n=document.getElementById("name").value;
+                var mn=document.getElementById("mobilenumber").value;
+                var mail=document.getElementById("mail").value;           
+                var pw=document.getElementById("password").value;
+                var cpw=document.getElementById("confirmpw").value;
+                var at =mail.indexOf("@");
+                var dot=mail.lastIndexOf(".")
+                if (n==""){ 
+                    alert("Username is required")  
+                    return false;
+                }
+                else if (n.length<"4"){
+                    alert("Username can't be created with less than 4 letters")
+                    return false;
+                }
+                else if (n.length>"15"){
+                    alert("Username can't be created with more than 15 letters")
+                    return false;
+                }
+                else if (mn.length!="10"){
+                    alert("Mobile number is required")
+                    return false;
+                }  
+                else if(mn.search(/[0-9]/)==-1){
+                    alert("Mobile number should contain only numbers")
+                    return false;
+                }
+                else if(mail.length=="0"){
+                    alert("E-mail is required")
+                    return false;
+                }
+                else if (at< 1 || ( (dot-at) < 2 )) {
+                    alert("Please enter correct email ID")
+                    return false;
+                }
+                else if(pw==""){
+                    alert("Enter your password")
+                    return false;
+                }
+                else if (pw.length<"6"){
+                    alert("Create a password with more than 6 characters")
+                    return false;
+                }
+                else if(pw.search(/[A-Z]/)==-1){
+                    alert("Password should contain atleast one uppercase alphabet")
+                    return false;
+                }
+                else if(pw.search(/[0-9]/)==-1){
+                    alert("Password should contain atleast a number")
+                    return false;
+                }
+                else if (cpw.length<"6"){
+                    alert("Please confirm your password");
+                    return false;
+                } 
+                else if(password.value!=confirmpw.value){
+                    alert("The passwords doesn't match")
+                }
+                else if(password.value==confirmpw.value){
+                    let r = confirm("Account has been created successfully, Click ok to go home");
+                    if(r == true){ console.log("true"); window.location.href = './homepage.html'; }
+                }
+            }
+        </script>
+        <body>
+            <div class="register-box">
+                <h1>Create an account</h1>
+                <form id="validate" method="post" onsubmit="validateForm()">                                    
+                    <input type="text" id="name" placeholder="Enter your name"> 
+                    <input type="text" id="mobilenumber" placeholder="Mobile number"> 
+                    <input type="text" id="mail" placeholder="Enter your mail id">                     
+                    <input type="password"  id="password" placeholder="At least 6 characters">
+                    <input type="password"  id="confirmpw" placeholder="Retype the password">	
+                </form>
+					<button class="btn" onclick="validateForm()">Signup</button><br><br>	
+					<a href="../Login/login.html">Already have an account ?<br>Click here to login !!</a>
+            </div>
+        </body>
+    </head>
+</html>

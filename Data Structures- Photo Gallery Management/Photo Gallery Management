@@ -1,0 +1,370 @@
+
+class Node:
+        def _init_(self):
+            self.name = None
+            self.next = None
+            self.prev = None
+
+
+class cll:
+
+    def __init__(self):
+        self.start = None
+
+
+    def countNodes(self):
+
+        temp = self.start
+        result = 0
+        if (temp != None) :
+            while True :
+                temp = temp.next
+                result = result + 1
+                if (temp == self.start):
+                    break
+        return result
+
+
+    def insert(self,name) :
+
+
+        if (self.start == None) :
+
+            new_node = Node()
+            new_node.name=name
+            new_node.next = new_node.prev = new_node
+            self.start = new_node
+            return
+
+
+        last = (self.start).prev
+
+
+        new_node = Node()
+        new_node.name=name
+        new_node.next = self.start
+
+
+        (self.start).prev = new_node
+
+
+        new_node.prev = last
+
+
+        last.next = new_node
+
+    def paste(self):
+        global copy
+        while(len(copy)!=0):
+            temp=copy.pop(0)
+            self.insert(temp.name)
+
+    def insertEnd(self) :
+
+
+        if (self.start == None) :
+
+            new_node = Node()
+            new_node.name = input("\n\nEnter the photo name : ")
+            new_node.next = new_node.prev = new_node
+            self.start = new_node
+            print("\nPhoto added\n")
+            return
+
+
+        last = (self.start).prev
+
+
+        new_node = Node()
+        new_node.name = input("\n\nEnter the photo name : ")
+
+
+        new_node.next = self.start
+
+
+        (self.start).prev = new_node
+
+
+        new_node.prev = last
+
+
+        last.next = new_node
+        print("\nPhoto added\n")
+
+
+
+    def viewimages(self):
+        temp=self.start
+        print("\n")
+        print("\n\tviewing \n\n")
+        print ("\t",temp.name)
+        print("\n\n")
+        flag=True
+        global copy
+        while (flag==True):
+            if self.start is None:
+                print("\n\nFolder Empty\n")
+                break
+            n=int(input("\npress 1 to view next image\n press 2 to view previous image\n press 3 to delete this image\npress 4 to copy image\n press 5 to cut\npress 6to go back :"))
+
+            if (n==1):
+                    print("\n\n\t viewing \n\n")
+                    temp = temp.next
+                    print ("\t",temp.name)
+                    print("\n\n")
+            elif (n==2):
+                    print("\n\n\t viewing \n\n")
+                    temp = temp.prev
+                    print ("\t",temp.name)
+                    print("\n\n")
+            elif (n==3):
+                if self.start == temp:
+                    self.start = temp.next
+
+                if temp.next is not None:
+                    temp.next.prev = temp.prev
+
+
+
+                if temp.prev is not None:
+                    temp.prev.next = temp.next
+                print("\n\nPhoto deleted\n\n")
+
+                print("\n\n\t viewing \n\n")
+                temp = temp.prev
+                print ("\t",temp.name)
+                print("\n\n")
+            elif(n==4):
+                copy.append(temp)
+                print("\nItem copied\n")
+            elif(n==5):
+                copy.append(temp)
+                print("\nItem copied and deleted")
+                if self.start == temp:
+                    self.start = temp.next
+
+                if temp.next is not None:
+                    temp.next.prev = temp.prev
+
+
+
+                if temp.prev is not None:
+                    temp.prev.next = temp.next
+                print("\n\n\t viewing \n\n")
+                temp = temp.prev
+                print ("\t",temp.name)
+                print("\n\n")
+            elif(n==6):
+                flag=False
+
+
+
+    def display(self) :
+        if self.start is not None:
+            temp = self.start
+
+            print ("\n\nImage List\n")
+            while (temp.next != self.start) :
+
+                print (temp.name, end = " ")
+                temp = temp.next
+
+            print (temp.name)
+            print("\n\n")
+        else:
+            print("\nFolder Empty\n")
+
+
+
+
+class folder:
+    def __init__(self,foldername):
+        self.foldername=foldername
+        self.nop=0
+        self.head=cll()
+
+
+
+    def menudriven(self):
+
+        while(1):
+            self.nop=self.head.countNodes()
+            self.head.display()
+            print("press 1 to add a photo\npress 2 to view photos\npress 3 to see number of photos\npress 4 to paste\npress 5 to go back: ")
+            users_choice = int(input("\nEnter your Choice: "))
+            if users_choice == 1:
+                self.head.insertEnd()
+            elif users_choice == 2:
+                self.head.viewimages()
+            elif users_choice == 3:
+                print("\nNumber of images : ",self.head.countNodes(),"\n\n")
+            elif users_choice == 4:
+                self.head.paste()
+            elif users_choice == 5:
+                break
+            else:
+                print("\nPlease enter a valid Input\n\n")
+
+
+
+
+def maxheapify(arr, n, i):
+
+    largest = i
+    l = 2 * i + 1
+    r = 2 * i + 2
+    if l < n and arr[l].nop > arr[largest].nop:
+        largest = l
+    if r < n and arr[r].nop > arr[largest].nop:
+        largest = r
+    if largest != i:
+        arr[i], arr[largest] = arr[largest], arr[i]
+        maxheapify(arr, n, largest)
+
+
+
+
+def buildmaxHeap(arr):
+    n=len(arr)
+    startIdx = n // 2 - 1
+    for i in range(startIdx, -1, -1):
+        maxheapify(arr, n, i)
+
+
+
+
+def minheapify(arr, n, i):
+
+    largest = i
+    l = 2 * i + 1
+    r = 2 * i + 2
+    if l < n and arr[l].nop < arr[largest].nop:
+        largest = l
+    if r < n and arr[r].nop < arr[largest].nop:
+        largest = r
+    if largest != i:
+        arr[i], arr[largest] = arr[largest], arr[i]
+        minheapify(arr, n, largest)
+
+
+
+def buildminHeap(arr):
+    n=len(arr)
+    startIdx = n // 2 - 1
+    for i in range(startIdx, -1, -1):
+        minheapify(arr, n, i)
+
+
+
+
+def createfolder(arr):
+    print("\n\nEnter folder name to create: ")
+    print("\n")
+    name=input()
+    for n in arr:
+        if n.foldername == name:
+            print("\n\nFolder name already exist\n\n")
+            return
+    print("\n\nFolder created\n\n")
+    obj=folder(name)
+    arr.append(obj)
+
+
+
+
+
+def deletefolder(arr):
+    print("\n\nEnter folder name to delete: ")
+    print("\n")
+    name=input()
+    for n in arr:
+        if n.foldername == name:
+            arr.remove(n)
+            print("\n\nFolder deleted\n\n")
+            return
+    print("\n\nFolder not found\n\n")
+
+
+
+
+def findlargestfolder(arr):
+    sample=list(arr)
+    buildmaxHeap(sample)
+    print("\nThe largest folder is ",sample[0].foldername,"\n")
+
+
+
+def findsmallestfolder(arr):
+    sample=list(arr)
+    buildminHeap(sample)
+    print("\nThe smallest folder is ",sample[0].foldername,"\n")
+
+
+
+def printfolder(arr):
+
+    while(1):
+        for i in range(0,len(arr)):
+            print(i+1,arr[i].foldername)
+        print("\n\nEnter the folder number to view \nEnter ",len(arr)+1,"to go back")
+        x=int(input())
+        if x <= len(arr):
+            arr[x-1].menudriven()
+        else:
+            break
+
+
+
+arr=[]
+s0="camera"
+s1="wassap"
+s2="snap"
+arr.append(folder(s0))
+arr.append(folder(s1))
+arr.append(folder(s2))
+arr[0].head.insert("image1")
+arr[0].head.insert("image2")
+arr[0].head.insert("image3")
+arr[0].head.insert("image4")
+arr[0].head.insert("image5")
+arr[0].head.insert("image6")
+arr[1].head.insert("image11")
+arr[1].head.insert("image13")
+arr[1].head.insert("image12")
+arr[1].head.insert("image14")
+arr[2].head.insert("image31")
+arr[2].head.insert("image32")
+arr[0].nop=arr[0].head.countNodes()
+arr[1].nop=arr[1].head.countNodes()
+arr[2].nop=arr[2].head.countNodes()
+copy=[]
+
+while(1):
+    print("MENU")
+    print("Enter 1 to insert a folder")
+    print("Enter 2 to delete a folder")
+    print("Enter 3 to see the largest folder")
+    print("Enter 4 to see the smallest folder")
+    print("Enter 5 to view the folder")
+    print("Enter 6 to clear copy list")
+    print("Enter 7 to exit")
+    users_choice = int(input("\nEnter your Choice: "))
+    if users_choice == 1:
+        createfolder(arr)
+    elif users_choice == 2:
+        deletefolder(arr)
+    elif users_choice == 3:
+        findlargestfolder(arr)
+    elif users_choice == 4:
+        findsmallestfolder(arr)
+    elif users_choice == 5:
+        printfolder(arr)
+    elif users_choice == 6:
+        copy=[]
+        print("\n\ncopy list cleared\n\n")
+    elif users_choice == 7:
+        print("\nExiting................................\n")
+        break
+
+    else:
+        print("\nPlease enter a valid Input\n")

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout Card</title>
+    <link rel="icon" href="logo (1).ico">    
+    <link rel="stylesheet" href="buynow.css">
+    <script type="text/javascript" >
+    function validateForm()
+{
+    
+    var fn=document.getElementById("fname").value;
+    var mno=document.getElementById("mno").value;
+    var addr=document.getElementById("adr").value;
+    var town=document.getElementById("town").value;
+    var city=document.getElementById("city").value;
+    var state=document.getElementById("state").value;
+    var pin=document.getElementById("pincode").value;
+    var cname=document.getElementById("cname").value;
+    var cnum=document.getElementById("ccnum").value;
+    var month=document.getElementById("expmonth").value;
+    var yr=document.getElementById("expyear").value;
+    var cvv=document.getElementById("cvv").value;
+ 
+ if (fn==""){ 
+     alert("Please enter your full name");
+     return false;
+ }
+ else if (fn.length<"4"){   
+    alert("Username can't be less than 4 letters!")
+    return false;
+} 
+ else if (mno.length!="10"){
+    alert("Mobile number is invalid");
+    return false;
+ }
+else if (addr==""){ 
+    alert("Please enter your address for the payment");
+    return false;
+}
+else if (town==""){ 
+    alert("Please enter your town in which you are residing");
+    return false;
+}
+else if (city==""){ 
+    alert("Please enter your city");
+    return false;
+}
+else if (state==""){ 
+    alert("Enter your State");
+    return false;
+}
+else if (pin.length!="6"){ 
+    alert("Please enter the pincode");
+    return false;
+}
+else if (cname==""){ 
+    alert("Please enter your card name");
+    return false;
+}
+else if (cnum.length!="16"){ 
+    alert("Please enter your card number");
+    return false;
+}
+else if (month==""){ 
+    alert("Please enter your expiry month");
+    return false;
+}
+else if (yr==""){ 
+    alert("Please enter your expiry year");
+    return false;
+}
+else if (cvv.length!="3"){ 
+    alert("Please enter the cvv");
+    return false;
+}
+}
+
+
+
+</script>
+</head>
+<body>
+<h2>Checkout Form</h2>
+<div class="row">
+    <div class="col-75">
+        <div class="container">
+            <form id="validate" method="post"  onsubmit="return validateForm()" action="checkout.html">            
+                <div class="row">
+                    <div class="col-50">
+                        <h3>Billing Address</h3>
+                        <input type="text" id="fname" placeholder="Your full name">
+                        <input type="text" id="mno"  placeholder="10-digit mobile number">                        
+                        <input type="text" id="adr" placeholder="Address (Area and Street)"> 
+                        <input type="text" id="town" placeholder="Town">                       
+                        <input type="text" id="city" placeholder="City">
+                        <div class="row">
+                            <div class="col-50">                                
+                                <input type="text" id="state" name="state" placeholder="State">                               
+                            </div>
+                            <div class="col-50">                                
+                                <input type="text" id="pincode" name="pincode" placeholder="Pincode">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-50">
+                        <h3>Payment</h3>
+                        <label for="fname">Accepted Cards</label>
+                        <div class="icon-container">
+                            <img src="Credit-Card-Icons.jpg" alt="Accepted cards" width="200px" height="50px">
+                        </div>                                                
+                        <input type="text" id="cname" placeholder="Card name">                        
+                        <input type="text" id="ccnum" placeholder="Card number">                        
+                        <input type="text" id="expmonth" placeholder="Month">
+                        <div class="row">
+                            <div class="col-50">                                
+                                <input type="text" id="expyear" placeholder="Year">
+                            </div>
+                            <div class="col-50">                               
+                                <input type="password" id="cvv" placeholder="cvv">
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <button class="btn" >Continue to checkout</button>
+            </form>
+        </div>
+    </div>   
+<div class="marq">
+    <marquee>Delivery might get delayed by 1 or 2 days if you are residing in covid restricted area. Sorry for the inconvenience caused. Kindly be patient !!</marquee>
+</div>
+</body>
+</html>

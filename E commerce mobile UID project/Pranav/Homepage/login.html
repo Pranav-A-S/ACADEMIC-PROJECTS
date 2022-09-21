@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Gadegetza Login</title>  
+        <link rel="stylesheet" type="text/css" href="login.css">
+        <link rel="icon" href="logo (1).ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script type="text/javascript" src="login.js"></script>
+        <body>
+            <div class="login-box">
+                <img src="img.png" class="dp">
+                <h1>Login here</h1>                
+                <form id="validate" method="post" onsubmit="validateForm()"> 
+                    <div class="details">
+                        <label for="number" class="fa fa-user icon"></label>                     
+                        <input type="text" id="username" placeholder="Username">                        
+                    </div>
+                    <div class="details">
+                        <label for="number" class="fa fa-unlock icon"></label>
+                        <input type="password"  id="password" placeholder="Password">                         
+                    </div>
+                    <div class="details">
+                        <label for="number" class="fa fa-lock icon"></label>
+                        <input type="password"  id="confirmpw" placeholder="Retype the password">                        
+                    </div>
+                </form>
+					<button class="btn" onclick="validateForm()">Login</button><br><br>	
+					<a href="signup.html">New to Gadgetza ?<br>Create an account !!</a>
+            </div>
+        </body>
+    </head>
+ </html>

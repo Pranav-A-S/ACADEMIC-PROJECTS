@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.elements{
+    float: right;
+    list-style: none;
+}
+
+.elements li{
+    display: inline-block;
+    margin: 30px 50px;
+
+}
+
+.elements li a:link,
+.elements li a:visited{
+    padding: 8px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17.5px;
+}
+
+.logo{
+    margin: 7px 10px;
+    float: left;
+}
+
+.elements li a:hover,
+.elements li a:active{
+    border-bottom: 2px solid #c20c0c;
+    
+}

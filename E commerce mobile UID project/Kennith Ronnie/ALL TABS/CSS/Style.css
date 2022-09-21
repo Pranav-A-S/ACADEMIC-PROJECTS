@@ -1,0 +1,276 @@
+/*---------------------Basic Setup------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+/*-------------------Heading----------------------*/
+
+h2 {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 5em;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    font-size: 200%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    font-weight:300;
+    text-transform: uppercase;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #c20c0c;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Segoe UI", Arial, sans-serif
+}
+
+.row{
+    max-width: auto;
+    margin: 0 auto;
+}
+
+/*---------------------section--------------------*/
+
+.td-text{
+    text-align: center;
+    margin-top: 15px;
+    line-height: 160%;
+    font-size: 100%;
+}
+
+.td-text a{
+    text-decoration: underline;
+    color:#555;
+    font-weight:bold;  
+}
+
+.box{
+    margin-top: 50px;
+    text-align: center;
+}
+
+section{
+    margin: 40px 0px 10px 0px;
+}
+
+.back2top{
+    text-decoration: none;
+    color: #c20c0c;
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    border: 1.25px solid #c20c0c;
+    text-transform: uppercase;
+    border-radius: 30px;
+    letter-spacing: 0.75px;
+    margin: 0px 0 50px 0;
+}
+
+.back2top:link,
+.back2top:visited{
+    border: 1px solid #c20c0c;
+    color: #c20c0c;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.back2top:hover,
+.back2top:active{
+    border: 1px solid #c20c0c;
+    color: #fff;
+    background-color:#c20c0c;
+}
+
+.back2home{
+    text-decoration: none;
+    color: #c20c0c;
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    border: 1.25px solid #c20c0c;
+    text-transform: uppercase;
+    border-radius: 30px;
+    letter-spacing: 0.75px;
+    margin: 0px 0 50px 0;
+}
+
+.back2home:link,
+.back2home:visited{
+    border: 1px solid #c20c0c;
+    color: #c20c0c;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.back2home:hover,
+.back2home:active{
+    border: 1px solid #c20c0c;
+    color: #fff;
+    background-color:#c20c0c;
+}
+
+/*----------------Footer--------------*/
+
+footer {
+    background-color: #333;
+    padding: 40px 50px;
+    font-size: 90%;
+}
+
+.footer-nav a{
+    list-style: none;
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    margin: 0px 50px;
+}
+
+.foot{
+    margin: 50px 0 5px 0;
+    color: #888;
+    font-size: 85%;
+}
+
+.footer-nav a:link,
+.footer-nav a:visited{
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover,
+.footer-nav a:active {
+    color: #ddd;
+}
+
+.container {
+    margin-top: 20px;
+    overflow: hidden;
+  }
+
+.filterdiv {
+   
+    background-color: #ffffff;
+    color: #000000;
+    align-items: center;
+    width: 100px;
+    line-height: 100%;
+    text-align: center;
+    margin: 90px 90px 90px 90px;
+    display: none;
+    float: left;
+    /* Hidden by default */
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+  
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  /* Add a light grey background on mouse-over */
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  /* Add a dark background to the active button */
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+
+/*navigator-----------------------------------------------------------------------*/
+.wrapper{
+    width: 600px;
+    margin-top: 25px;
+    float: right;
+    font-weight: bolder;
+}
+
+.wrapper ul li a, .wrapper ul li ul li a{
+    width: 170px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 100%;
+    font-weight: 300;
+    float: left;
+    color: rgb(0, 0, 0);
+    position: relative;
+    font-weight: bolder;
+}
+
+.wrapper ul
+{
+    list-style: none;
+    display: inline-block;
+    margin-top: 2%;
+    font-weight: bolder;
+}
+
+.wrapper ul li 
+{
+
+    width: 170px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 100%;
+    font-weight: bolder;
+    float: left;
+    color: rgb(0, 0, 0);
+    position: relative;
+}
+
+.wrapper ul li:hover
+{
+    background: #c20c0c;
+}
+
+.wrapper ul ul{
+    display: none;
+    font-weight: bolder;
+}
+
+.wrapper ul li:hover > ul
+{
+    display: block;
+    font-weight: bolder;
+}
+
+
+
+
+ 
+  

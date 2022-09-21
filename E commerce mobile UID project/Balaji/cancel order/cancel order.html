@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<head>
+    <title>
+      Form Registration
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body style="background-image: url('wp2913771-cool-wallpapers-4k-neon.jpg');
+background-repeat:repeat;
+background-size: cover;
+  background-position-x: center;
+  position: relative;
+  height: 500px;
+">
+<style>@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+  
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+.navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkblue;
+}
+
+.logo{
+    margin: 7px 10px;
+    float: left;
+}
+.navigation a {
+    position: sticky;
+    margin-bottom: 40px;
+    float: right;
+    color: white;
+    text-align: centre;
+    padding-top: 15px;
+    text-decoration: none;
+    font-size: 20px;
+ 
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-right: 40px;
+}
+
+.navigation a:hover {
+    background-color: darkblue;
+    color: antiquewhite;
+}
+input
+  {
+    padding: 15px 35px;
+    font-size: 16px;
+    color:black;
+    background-color:gainsboro;
+    border: 10px;
+    border-radius: 30px;
+    margin-top: 5px;
+    size: 50;
+  
+   
+  }
+
+  input:focus 
+  {
+    outline: none;
+    background-color:darkblue;
+    color:white;
+  }
+ 
+fieldset
+{
+
+  background-color:rgb(0,0,0,0.6);
+  
+  border-color:none;
+  margin-left: 400px;
+  margin-right: 400px;
+  margin-top:100px;
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-right: 10px;
+  border-radius: 24px;
+  opacity: 2px;
+  
+}
+legend
+{
+  color:white;
+  
+}
+  button 
+  {
+    display: block;
+    padding: 12px 38px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    background-color:darkblue;
+    border: 2px solid var(--blue);
+    border-radius: 10px;
+    cursor: pointer;
+    margin: auto;  
+  }
+  
+
+</style> 
+<div class="navigation">
+
+  <img src="logo-menubar.png" height="60" width="60" alt="logo" class="logo">
+
+<ul>
+    <a href="#">Contact us</a>
+    <a href="#">gadgetza care</a>
+    <a href="#">Tablets</a>
+    <a href="#">Laptops</a>
+    <a href="#">Mobiles</a>
+    <a href="#">Home</a>
+</ul>
+</div>
+
+    <form method="get" style="color:white;  font-size:larger ; text-align:left;font-weight: bold;"   name="myForm" id="form"  return onsubmit="validateForm()"  autocomplete="on" >
+      <fieldset>
+        <br>
+        <br>
+   <legend style="font-size: xx-large;">ORDER CANCELLATION </legend>
+        <label for="name">Name&emsp; :</label>
+        <input type="text"  id=name name="name" placeholder="H Neil Patrick"title="enter your name" return onblur="validate_name(this)"  required ><br>
+        <div style="display:none; color:red; font-size:medium;" id="part_empty_msg">
+            Please enter  name !
+        </div>
+        <div style="display:none; color:red; font-size:medium; " id="part_msg">
+          Please match the requested format !
+      </div><br>
+   
+
+       
+     
+     </div><br>
+
+        <label for="Email">Email ID &emsp;&emsp;&emsp;&emsp; :</label>
+        <input type="email" id="email" name="email" placeholder="patrick@yahoo.com" title="Accepted patterns - xxxx@some.com, xxx.yyy@some.org, xxx@some1.some2.net" return onblur="validate_mail(this)" required><br>
+        <div style="display:none; color:red; font-size:medium; " id="email_msg">
+            Please enter email!
+          </div><br>
+        <label for="pro">product ordered on&emsp;&emsp;&emsp;:</label>
+        <input type="date" id="pro" name="pro"  min="2021-01-01" max="2021-07-20" required><br>
+        <div style="display:none; color:red; font-size:medium; " id="pro_msg">
+            Please enter ordered date !
+        </div><br>
+       
+      
+        <br>
+        <label for="add">order no and Reason :</label><br>
+        <textarea id="add" name="add" rows="10" cols="50" placeholder="0347,i am cancelling this order because of......"title="Please mention ur skills" return onblur="validate_add(this)" required ></textarea><br>
+        <div style="display:none; color:red; font-size:medium; " id="add_msg">
+            Please enter reason!
+        </div><br>
+        <input type="button" id="submit" value="Submit" onclick="alert('your request is submitted ,we will upadate your request through email');"/>
+        
+</form>
+</fieldset>
+<script src="vali.js"></script>
+</body>
+</html>
+
+

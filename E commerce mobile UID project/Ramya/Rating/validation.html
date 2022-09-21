@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <select id="ddlView">
+            <option value="0">Select</option>
+            <option value="1">test1</option>
+            <option value="2">test2</option>
+            <option value="3">test3</option>
+        </select>  
+        <input type="button" onclick="Validate()" value="select" />
+
+        <script type="text/javascript">
+            function Validate()
+            {
+                var e = document.getElementById("ddlView");
+                var strUser = e.options[e.selectedIndex].value;
+
+                var strUser1 = e.options[e.selectedIndex].text;
+                if(strUser==0)
+                {
+                    alert("Please select a user");
+                }
+            }
+        </script>
+    </body>
+</html>

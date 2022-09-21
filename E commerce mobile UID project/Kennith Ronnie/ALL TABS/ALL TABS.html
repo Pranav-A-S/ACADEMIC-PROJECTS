@@ -1,0 +1,264 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="./CSS/normalize.css" rel="stylesheet" type="text/css">
+    <link href="./CSS/grid.css" rel="stylesheet" type="text/css">
+    <link href="./CSS/Style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100&display=swap" rel="stylesheet" type="text/css">
+    <script>
+        filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterdiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+    </script>
+    <title>TABS</title>
+
+    <style>
+        body {
+          margin: 0;
+        }
+        
+        .topnav {
+          overflow: hidden;
+          background-color: rgb(0, 0, 0);
+        }
+        
+        .topnav a {
+          font-family: Arial, Helvetica, sans-serif;
+          float: right;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 40px;
+          text-decoration: none;
+          font-size: 17px;
+          text-transform: uppercase;
+        }
+        
+        .topnav a:hover {
+          background-color: #c20c0c;
+        }
+        
+        </style>
+
+</head>
+<body>
+
+    <div class="topnav">
+        <img src="../../logo-menubar.png" height="50" width="50">
+      <a href="../../Kennith Ronnie/Contact-us_1/contact.html">Contact Us</a>
+      <a href="../../Kennith Ronnie/ALL TABS/ALL TABS.html">Tablets</a>
+      <a href="../../Kennith Ronnie/all laptops/ALL LAPTOPS.html">Laptops</a>
+      <a href="../../Pranav/AP/all-phones.html">Phones</a>
+      <a href="../../Pranav/Homepage/homepage.html">Home</a>
+    </div>
+
+    <br><br><br>
+    <div id="myBtnContainer" align="center">
+        <img src="filter.png" style="height: 80px;width: 100px;">
+        <button class="btn active" onclick="filterSelection('all')"> SHOW ALL</button>
+        <button class="btn" onclick="filterSelection('apple')"> APPLE</button>
+        <button class="btn" onclick="filterSelection('samsung')"> SAMSUNG</button>
+        <br><br>
+    </div>
+
+    <section class="tabs" id="b2t">
+
+        <div class="row">
+            <h2>TABS </h2>
+            <div class="container">
+            <div class="row js--wp-1">
+
+                <div class="col span-1-of-5 box">
+                    <div class="filterdiv apple">
+
+                    <img src="ipad.jpg" height="200" width="200"  alt="tabs" usemap="ipad10.2">
+
+                    <map name="#ipad10.2">
+                        <area shape="rect"  coords="0,0,200,200" href="../../Naveen/Tab/iPad 10.2/iPad 10.2.html">
+                    </map>
+
+                    <div class="td-text">
+                        
+                        <a  href="../../Naveen/Tab/iPad 10.2/iPad 10.2.html" >APPLE_IPAD_10.2</a></div>
+                        <p> 32 GB RAM | SILVER</p>
+
+                    </div>
+                </div>
+
+             
+
+                <div class="col span-1-of-5 box">
+                    <div class="filterdiv apple">
+                  
+
+                    <img src="iPad Air.jpg"  height="200" width="200" alt="tabs" usemap="#ipadair">
+
+                    <map name="#ipadair">
+                        <area shape="rect"  coords="0,0,200,200" href="../../Naveen/Tab/iPad air/iPad air.html">
+                    </map>
+
+                    <div class="td-text">
+
+                        <a  href="../../Naveen/Tab/iPad air/iPad air.html"> APPLE_IPAD_AIR</a>
+                        <p> 64 GB RAM | GOLD</p>
+
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="col span-1-of-5 box">
+                    <div class="filterdiv apple">
+
+                    <img src="iPad pro.jpg"  height="200" width="200"  alt="tabs" usemap="#ipadpro">
+
+                    <map name="#ipadpro">
+                        <area shape="rect"  coords="0,0,200,200" href="../../Naveen/Tab/iPad pro/iPad pro.html">
+                    </map>
+
+                    <div class="td-text">
+
+                        <a  href="../../Naveen/Tab/iPad pro/iPad pro.html">APPLE_IPAD_PRO</a>
+                        <p> 128 GB RAM | SPACE GREY</p>
+
+                    </div>
+                </div>
+
+                </div>
+               
+
+                <div class="col span-1-of-5 box">
+                    <div class="filterdiv samsung">
+
+                    <img src="S6.jpg"  width=200 height="200" alt="tabs" usemap="#samsungs6">
+
+                    <map name="#samsungs6">
+                        <area shape="rect" coords="0,0,200,200" href="../../Naveen/Tab/Samsung S6/S6.html">
+                    </map>
+
+                    <div class="td-text">
+
+                        <a  href="../../Naveen/Tab/Samsung S6/S6.html">SAMSUNG_TAB_S6</a>
+                        <p> 128 GB RAM | SILVER</p>
+
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="col span-1-of-5 box"  >
+                    <div class="filterdiv samsung">
+
+                    <img src="S7.jpg"   height="160" width="260" alt="tabs" usemap="#samsungs7" >
+
+                    <map name="#samsungs7">
+                        <area shape="rect" coords="0,0,260,160" href="#">
+                    </map>
+
+                    <div class="td-text">
+
+                        <a  href="../../Naveen/Tab/Samsung S7/S7.html">SAMSUNG_TAB_S7</a>
+                        <p> 128 GB RAM | GOLD</p>
+
+                    </div>
+                </div>
+
+                </div>
+
+                </div>
+
+
+                </div>
+
+              </div>      
+            </div>
+        </div>
+
+    </section>
+
+    <br>
+
+  
+
+    <br>
+
+
+    <center>
+
+        <a href="../../Pranav/Homepage/homepage.html" class="back2home">Back to home</a>
+
+    </center>
+
+    <footer>
+
+        <div class="row">
+
+                <center>
+                    <div class="footer-nav">
+
+                        <a href="../../Kennith Ronnie/about_us/ABOUT US.html" class="about us">About us</a>
+                        <a href="../../Kennith Ronnie/Contact-us_1/contact.html" class="contact us">Contact us</a>
+                        <a href="../../Kennith Ronnie/privacy policy/PRIVACY POLICY.html" class="privacy policy">Privacy Policy</a> 
+                        <a href="../../Kennith Ronnie/return policy/RETURN POLICY.html" class="return policy">Return Policy</a>
+
+                        <p class="foot">
+                            Copyright ©2021 by Gadgetza | All rights reserved.
+                        </p>
+
+                </center>
+
+            </div>
+            
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

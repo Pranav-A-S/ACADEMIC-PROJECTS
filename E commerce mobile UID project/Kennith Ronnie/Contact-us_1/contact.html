@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="grid.css" type="text/css">
+	<script src="scripts.js"></script>
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+          margin: 0;
+        }
+        
+        .topnav {
+          overflow: hidden;
+          background-color: rgb(0, 0, 0);
+        }
+        
+        .topnav a {
+          font-family: Arial, Helvetica, sans-serif;
+          float: right;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 40px;
+          text-decoration: none;
+          font-size: 17px;
+          text-transform: uppercase;
+        }
+        
+        .topnav a:hover {
+          background-color: #c20c0c;
+        }
+        
+        </style>
+
+</head>
+<body>
+    
+ 
+    <script>
+        function display()
+      {
+        var a=0;
+        if (document.getElementById('EX').checked){
+            alert('thank you for your feedback');
+        
+        }
+        else if (document.getElementById('GO').checked){
+            alert('thank you for your feedback');
+         
+        }
+        else if (document.getElementById('SA').checked){
+            alert('thank you for your feedback');
+         
+        }
+        else if (document.getElementById('PO').checked){
+            alert('thank you for your feedback');
+         
+        }
+        else{
+          document.getElementById("disp").innerHTML="no one was selected"
+        }
+        
+    }
+      
+    </script>
+    
+    <div class="topnav">
+        <img src="../../logo-menubar.png" height="50" width="50">
+      <a href="../../Kennith Ronnie/Contact-us_1/contact.html">Contact Us</a>
+      <a href="../../Kennith Ronnie/ALL TABS/ALL TABS.html">Tablets</a>
+      <a href="../../Kennith Ronnie/all laptops/ALL LAPTOPS.html">Laptops</a>
+      <a href="../../Pranav/AP/all-phones.html">Phones</a>
+      <a href="../../Pranav/Homepage/homepage.html">Home</a>
+    </div>
+        <br><br><br>
+    <h1 align="center">CONTACT US - GADGETZA</h1>
+    <p id="quotes"><center><b><i>“True intuitive expertise is learned from prolonged<br> experience with good feedback on mistakes.”</i></b></p></center>
+
+
+    <div class="help">
+      <div class="row">
+        <h2><center>HELP SUPPORT</center></h2>
+      </div>
+    </div>  
+    <div  align="center" class="row js--wp-1">
+
+        <div class="col span-1-of-2 box">
+            <div class="form">
+  <h2>Contact us</h2>
+  <P>WE'LL GET BACK TO YOU SOON!!</P>
+  <div id="error_message"></div>
+  <form  id="myform" onsubmit="return valid();">
+    <div class="input_field">
+        <tr><td><input type="text" placeholder="Name" id="name"></td></tr>
+    </div>
+    <div class="input_field">
+        <input type="text" placeholder="Subject" id="subject">
+    </div>
+    <div class="input_field">
+        <input type="text" placeholder="Phone" id="phone">
+    </div>
+    <div class="input_field">
+        <input type="text" placeholder="Email" id="email">
+    </div>
+    <div class="input_field">
+        <textarea placeholder="comments" id="message" style=" background:transparent ;"></textarea>
+    </div>
+    <div class="btn">
+        <input type="submit">
+    </div>
+  </form>
+  <div class="social">
+    <a href="#"><i class="fab fa-facebook-f" style="color: black;"></i></a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#"><i class="fab fa-twitter" style="color: black;"></i></a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#"><i class="fab fa-instagram" style="color: black;"></i></a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+    </div>
+</div>
+</div>
+<div class="col span-1-of-2 box">
+    <h2>OR</h2>
+    <H3>CALL OUR TOLL-FREE NUMBER</H3>
+    <H3>1800-0081-99</H3><br>
+    <p>MAIL US: <br>cs@gadgetza.com</p>
+    
+    </div>
+    
+    
+    </div>
+    
+    </form>
+    
+    <h2 style = "text-align: center;">Leave a feedback for us to improve 😊</h2><br>
+    <div class="border">
+    <div class="ques">
+    
+    <p >1. How good is our delivery service ?</p>
+    <input type="radio" name="radiobutton1" id="EX" value="EXCELLENT" />Excellent
+    <input type="radio" name="radiobutton1" id="GO" value="GOOD" />Good
+    <input type="radio" name="radiobutton1" id="SA" value="SATISFACTORY" />Satisfactory
+    <input type="radio" name="radiobutton1" id="PO" value="POOR" />Poor
+    
+    <br><br>
+    <p>2. How good is our packaging ?</p>
+    <input type="radio" name="radiobutton2" id="ex" value="value1" />Excellent
+    <input type="radio" name="radiobutton2" id="go" value="value2" />Good
+    <input type="radio" name="radiobutton2" id="sa" value="value3" />Satisfactory
+    <input type="radio" name="radiobutton2" id="po" value="value4" />Poor
+    
+    <br><br>
+    <p>3. How is the quality of the products delivered ?</p>
+    <input type="radio" name="radiobutton3" value="value1" />Excellent
+    <input type="radio" name="radiobutton3" value="value2" />Good
+    <input type="radio" name="radiobutton3" value="value3" />Satisfactory
+    <input type="radio" name="radiobutton3" value="value4" />Poor
+    
+    <br><br>
+    
+    <p>4. Any other suggestions ?</p>
+    
+    <div class="suggestion">
+    <input type="textarea" placeholder="Suggestion (if any)"></textarea><br><br>
+    </div>
+    <div id="disp"style=
+    "color:red ; font-weight:bold ; font-size:18px">
+    </div>
+    
+    
+    </div>
+    
+    <div class="submit-fb">
+    <center>
+     <input type="submit" onclick="display()">
+    </center>
+    </div>
+    
+    </div>
+    
+    
+    
+    <br><br>
+      
+    <footer>
+    
+    <div class="row">
+    
+          <center>
+              <div class="footer-nav">
+    
+                  <a href="../../Kennith Ronnie/about_us/ABOUT US.html" class="about us">About us</a>
+                  <a href="../../Kennith Ronnie/privacy policy/PRIVACY POLICY.html" class="privacy policy">Privacy Policy</a> 
+                  <a href="../../Kennith Ronnie/return policy/RETURN POLICY.html" class="return policy">Return Policy</a>
+                  <p class="foot">
+                      Copyright ©2021 by Gadgetza. All rights reserved.
+                  </p>
+    
+          </center>
+    
+      </div>
+      
+    </div>
+    
+    </footer>
+    
+     
+       
+          
+    
+      </body>
+    </html>
+

@@ -1,0 +1,56 @@
+html{
+    background-color: #fff;
+    color:black;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    
+ 
+}
+*{
+    margin: 0;
+
+}
+*{font-family: 'Rubik', sans-serif;
+}
+.navigation{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:darkblue;
+}
+.navigation a{
+  position:sticky;
+  margin-bottom: 40px;
+  float:right;
+  color:white;
+  text-align: centre;
+  padding-top: 15px;
+  text-decoration: none;
+  font-size: 20px;
+  border-bottom: 1px solid:blue;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-right: 40px;
+} 
+
+.navigation a:hover{
+    background-color:darkblue;
+    color:antiquewhite;
+}
+h1{  background-image: url(04_howtobuy_img_04.webp);
+    background-size: cover;
+    background-position-x: center;
+    position: relative;
+    height: 500px;
+    color: white;
+
+    font-size: 260%;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 4.5px;
+    word-spacing: 6.5px;
+    
+
+}
+    

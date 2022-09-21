@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <link href="resources/css/normalize.css" rel="stylesheet" type="text/css">
+        <link href="resources/css/grid.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="resources/css/STYLE-home.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100&display=swap" rel="stylesheet" type="text/css">
+        <link href="resources/fonts/fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="/resources/css/ionicons.min.css">
+        <title>Gadgetza</title>
+        <link rel="icon" href="logo (1).ico">
+        <link rel="stylesheet" type="text/css" href="resources/css/slider.css">
+        
+    </head>
+
+    <body>
+
+        <header id="b2t">
+
+            <nav>
+                <div class="row">
+                    <img src="737fc184821443c9887bbf069a67a21f.png" height="115" width="115" alt="logo" class="logo" usemap="#logo-top">
+                    <map name="#logo-top">
+                        <area shape="rect" coords="0,0,115,115" href="#logo-top">
+                    </map>
+
+                    <div class = "wrapper">
+                    
+                        <ul>
+                        
+                            <li><a href="#categories">Categories</a>
+                                <ul>
+                                    <li><a href="../AP/all-phones.html">Mobiles</a></li>
+                                    <li><a href="../../Kennith Ronnie/all laptops/ALL LAPTOPS.html">Laptops</a></li>
+                                    <li><a href="../../Kennith Ronnie/ALL TABS/ALL TABS.html">Tablets</a></li>
+                                </ul>
+                            </li>
+
+                            <li>Deals
+                                <ul>
+                                    <li><a href="#best-selling">Best Selling</a></li>
+                                    <li><a href="#offer">Offers</a></li>
+                                </ul>
+                            </li>
+
+                            <li>Help
+                                <ul>
+                                    <li><a href="../../Kennith Ronnie/Contact-us_1/contact.html">Contact Us</a></li>
+                                    <li><a href="../../Kennith Ronnie/about_us/ABOUT US.html">About us</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#features">Features</a></li>
+                    
+                        </ul>
+
+                        <div class="header-box">
+                            <h1>Excellence, need you.</h1>
+                            <a class="btntop Login-button1" href="./login.html">Sign in</a>
+                            <a class="btntop Login-button2" href="./signup.html">Create New Account</a>
+                        </div>
+            
+                        <div class="clock">
+                            <div class="display">
+                      </div>
+                      </div>
+
+                    </div>
+                </div>
+                
+            </nav>
+
+            <script>
+
+                setInterval(function()
+                {
+                const clock = document.querySelector(".display");
+                let time = new Date();
+                let sec = time.getSeconds();
+                let min = time.getMinutes();
+                let hr = time.getHours();
+                let day = 'AM';
+                if(hr > 12){
+                day = 'PM';
+                hr = hr - 12;
+                }
+                if(hr == 0){
+                hr = 12;
+                }
+                if(sec < 10){
+                sec = '0' + sec;
+                }
+                if(min < 10){
+                min = '0' + min;
+                }
+                if(hr < 10){
+                hr = '0' + hr;
+                }
+                clock.textContent = hr + ':' + min + ':' + sec + " " + day;
+                });
+
+            </script> 
+
+        </header>
+
+        <section class="section-about" id="about">
+
+            <div class="row" id="features">
+                <h2>Selling the best in technology</h2>
+                <p class="long-copy">Hello, we're Gadgetza. We sell premium phones and laptops at the best price. </p>
+            </div>
+
+            <div class="row js--wp-1">
+                <div class="col span-1-of-3 box">
+                    <i class="fas fa-shipping-fast icon-about"></i>
+                    <h3>Express Delivery</h3>
+                    <p>Get your products fast at no extra fee. Your satisfaction, our pride.</p>
+                </div>
+                
+                <div class="col span-1-of-3 box">
+                    <i class="fas fa-exchange-alt icon-about"></i>
+                    <h3>Easy Returns</h3>
+                    <p>Not satisfied with the product?, return and get another product at your convenience.</p>
+                </div>
+                
+                <div class="col span-1-of-3 box">
+                    <i class="fas fa-infinity icon-about"></i>
+                    <h3>Never Ending Stocks</h3>
+                    <p>We are never out of stock. Get any number of products anytime and anywhere across India!</p>
+                </div> 
+                        
+            </div>
+
+            <center>
+
+                <table>
+
+                    <tr>
+                        <td class="abt"><img src="apple_logo_PNG19688.png" height="100" width="130" alt="logo1"></td>
+                        <td class="abt"><img src="dc36c1d02dfe2ec192b7ec6d2289cb2d.png" height="70" width="140" alt="logo2"></td>
+                        <td class="abt"><img src="oneplus-logo.png" height="40"  width="130" alt="logo3"></td>
+                        <td class="abt"> <img src="hewlett-packard-logo-png-transparent.png" height="60"  width="70" alt="logo4"></td>
+                        <td class="abt"><img src="Dell.png" height="60"  width="70" alt="logo5"></td>
+                    </tr>
+
+                </table>
+
+            </center>
+        
+        </section>
+  
+        <section class="categories" id="categories">
+
+            <div class="row">
+
+                <h2>categories</h2>
+
+                <p class="long-copy">Hello people, check out our premium collections by choosing the category you want.<br>
+                If you are looking for offers, then scroll down a bit.</p>
+
+            </div>
+
+           
+
+                <table>
+
+                    <tr>
+                        <td class="cat">
+                            <img src="509-5092096_offering-high-quality-mobile-repair-service-main-image.png" height="180" width="300" alt="phones">
+                        </td>
+    
+                        <td class="cat">
+                            <img src ="24432_hp-laptop-png.jpg" height="180" width="295" alt="laptops">
+                        </td>
+
+                        <td class="cat">
+                            <img src ="196-1964089_phones-and-tablets-png-transparent-png.png" height="180" width="275" alt="Tablets">
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td><center><a href="../AP/all-phones.html" class="cat-name">Mobiles</a></center></td>
+
+                        <td><center><a href="../../Kennith Ronnie/all laptops/ALL LAPTOPS.html" class="cat-name">Laptops</a></center></td>
+
+                        <td><center><a href="../../Kennith Ronnie/ALL TABS/ALL TABS.html" class="cat-name">Tablets</a></center></td>
+                    </tr>
+    
+                </table>
+
+        </section>
+
+        <!-- <section class="top-deals" id="topdeals">
+
+            <div class="row">
+
+                <h2>Offers</h2>
+
+                <p class="long-copy">Checkout our top deals and get products with high discounts</p>
+
+                <div class="row js--wp-1">
+
+                    <div class="col span-1-of-3 models">
+
+                        <img src="dg7500nt_cnb_00000ff090_bk.jpg" height ="180" width="260" alt="Dell G7" usemap="#Dell G7">
+
+                        <map name="#Dell G7">
+                            <area shape="rect" coords="0,0,260,180" href="#">
+                        </map>
+
+                        <div class="td-text">
+
+                            <a href="../../Ramya/Lap/Dell G7.html">Dell G7</a>
+                            <p>16 GB ram | 1 TB SSD</p>
+                            <p>Now at ₹ 1,55,989.99<s><br>₹ 1,70,989.99</s></p>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="col span-1-of-3 models">
+
+                        <img src="iphone-11-128-d-mwm02hn-a-apple-0-original-imafkg242ugz8hwc.jpeg" height ="180" width="140" alt="Iphone 11" usemap="#Iphone11">
+
+                        <map name="#Iphone11">
+                            <area shape="rect" coords="0,0,140,180" href="#">
+                        </map>
+
+                        <div class="td-text">
+
+                            <a href="../../Balaji/mobiles final/iphone 11.html">iPhone 11</a>
+                            <p>Black | 64 GB</p>
+                            <p>₹49,999</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col span-1-of-3 models">
+
+                        <img src="71UqqpGVheL._SL1500_.jpg" height ="180" width="180" alt="OnePlus 8T" usemap="#OP8T">
+
+                        <map name="#OP8T">
+                            <area shape="rect" coords="0,0,180,180" href="#">
+                        </map>
+
+                        <div class="td-text">
+
+                            <a href="../../Balaji/mobiles final/oneplus 8T.html">OnePlus 8T 5G</a>
+                            <p>12 GB ram, 256 GB ROM | Aquamarine Green</p>
+                            <p>Now at ₹ 41,999.00<s><br>₹ 45,999.00</s></p>
+
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+            </div> -->
+            <section class="offers" id="offer">
+
+                <div class ="row">
+
+                    <h2>Offers</h2>
+                    <p class="long-copy">Checkout our top deals and get products with high discounts</p>
+
+                    <div class="slider">
+
+                        <div class="img-box">
+                            <img src = "images/1.png" alt="" class="slider_img">
+                        </div>
+                        
+                        <button class="bttn" onclick= "prev()">Previous</button>
+                        <button class="bttn" onclick= "next()">Next</button>
+                    </div>
+
+                    <script src="js/slider.js" type="text/javascript"></script>
+
+                </div>
+
+
+            </section>
+
+            <section class = "Whats new" id="best-selling">
+
+                <div class = "row">
+
+                    <h2>What's Trending</h2><br>
+                    <p class="long-copy">Here are the products which are newly arrived and best selling.<br>
+                    Best selling product from each category has been listed below and you can even watch its teaser.</p><br><br>
+
+                    <div class="container">
+                        
+                        <div class="rows">
+                            <div class="cols">
+                                <div class ="feature-img">
+                                    <img src="op 9.jpg" width=100%>
+                                    <img src="play.png" class="play-btn" 
+                                    onclick="playVideo('Meet the OnePlus 9 Series.mp4')">
+                                    <br><br>
+                                    <center><p>OnePlus 9 Pro &emsp;&emsp;<a class="buy-now1" href="../../Balaji/mobiles final/one plus 9 pro.html">Buy Now</a></p></center>
+                                </div>
+                            </div>
+            
+                            <div class="cols">
+                                <div class="small-img-row">
+                                    <div class="small-img">
+                                        <img src="macbook.jpg">
+                                        <img src="play.png" class="play-btn" 
+                                        onclick="playVideo('2020 13 inch mac book pro M1 official trailer.mp4')">
+                                    </div>
+                                    <p>Apple Macbook Pro M1 &emsp;&emsp;<a class="buy-now2" href="../../Ramya/Lap/macbookproM1.html">Buy Now</a></p>
+    
+                                </div>
+            
+                                <div class="small-img-row">
+                                    <div class="small-img">
+                                        <img src="iphone 12 pro.jpg">
+                                        <img src="play.png" class="play-btn"
+                                        onclick="playVideo('The most powerful iPhone ever.mp4')">
+                                    </div>
+                                    <p>iPhone 12 Pro &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a class="buy-now2" href="../../Balaji/mobiles final/iphone 12 pro max.html">Buy Now</a></p>
+                                </div>
+            
+                                <div class="small-img-row">
+                                    <div class="small-img">
+                                        <img src="s7.jpg">
+                                        <img src="play.png" class="play-btn"
+                                        onclick="playVideo('Galaxy Tab S7 _ S7+_ Official Launch film Work hard, play harder _ Samsung.mp4')">
+                                    </div>
+                                    <p>Samsung Galaxy Tab S7 &emsp;&emsp;<a class="buy-now2" href="../../Naveen/Tab/Samsung S7/S7.html">Buy Now</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+        
+                <div class="video-player" id="videoPlayer">
+                    <video width="100%" controls autoplay id="myVideo">
+                        <source src="Meet the OnePlus 9 Series" type="video/mp4">
+                    </video>
+                    <img src="close.png" class="close-btn" onclick="stopVideo()">
+                </div>
+                <script>
+                    var videoPlayer = document.getElementById("videoPlayer");
+                    var myVideo = document.getElementById("myVideo");
+        
+                    function stopVideo(){
+        
+                        videoPlayer.style.display = "none";
+                        myVideo.pause();
+                    }
+        
+                    function playVideo(file){
+                        myVideo.src = file;
+                        videoPlayer.style.display = "block";
+                    }
+                </script>
+
+            </section>
+
+            <br><br>
+
+            <section class = "about-gadgetza" id="logo-top">
+                <h2>About Gadgetza</h2>
+                <p>
+                    
+                    About Gadgetza – India’s Ultimate Online Gadgets Shopping Site Gadgetza’s vision is to create India’s most reliable
+                    and frictionless commerce ecosystem that creates life-changing experiences for buyers and sellers. In May 2021,
+                    Naveen along with Balaji, Ramya, Kennith and Pranav started Gadgetza.com. With thousands of users Gadgetza is
+                    the online shopping site for Internet users across the country, delivering to anywhere across the country.
+                    Gadgetza offers trending products, discounts & offers to make products available at slashed down prices to
+                    our valuable customers. Get Started! Shop Online Today at Gadgetza If you have been missing out on all the
+                    fun of online shopping thinking it requires one to be a technology aficionado then we have good news for you.
+                    Shopping online particularly at Gadgetza is a child’s play; all you need is a mobile phone or laptop or tablet
+                    with Internet connection to get started. Simply log into Gadgetza.com and browse through the wide assortment of
+                    products across categories. Once you click buy now on your favourite products; the products will be delivered right
+                    at your doorstep.  Covid 19 care, Yes Gadgetza is the first e-commerce website which offers certified package
+                    which is packed with safety and outside the package will be sanitised before you receive.
+
+
+                </p>
+            </section>
+
+            <center>
+
+                <a href="#b2t" class="back2top">Back to top</a>
+
+            </center>
+
+        </section>
+
+        <footer>
+
+            <div class="row">
+
+                    <center>
+                        <div class="footer-nav">
+
+                            <a href="../../Kennith Ronnie/about_us/ABOUT US.html" class="about us">About us</a>
+                            <a href="../../Kennith Ronnie/Contact-us_1/contact.html" class="contact us">Contact us</a>
+                            <a href="../../Kennith Ronnie/privacy policy/PRIVACY POLICY.html" class="privacy policy">Privacy Policy</a> 
+                            <a href="../../Kennith Ronnie/return policy/RETURN POLICY.html" class="return policy">Return Policy</a>
+
+                            <p class="foot">
+                                Copyright ©2021 by Gadgetza. All rights reserved.
+                            </p>
+
+                    </center>
+
+                </div>
+                
+            </div>
+
+        </footer>
+
+
+    </body>
+
+</html>

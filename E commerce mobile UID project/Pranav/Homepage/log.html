@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Gadegetza Login</title>  
+        <link rel="stylesheet" type="text/css" href="login.css">
+        <link rel="icon" href="logo (1).ico"><script type = "text/javascript">
+    function validateForm(){
+    var =document.getElementById("username").value;
+    var pw=document.getElementById("password").value;
+         var at =mail.indexOf("@");
+         var dot=mail.lastIndexOf(".");
+    if(mail=="")
+    {
+        alert("Please enter your email");
+        return false;
+    }
+    else if(pw=="")
+    {
+        alert("Please enter your password");
+        return false;
+    }
+    else if (at< 1 || ( (dot - at) < 2 )) {
+            alert("Please enter correct email ID");
+       return false;
+             }
+    else if (pw.length<8)
+    {
+        alert("length of the password should be greater than 8");
+        return false;
+    }
+    else if (pw.search(/[0-9]/)==-1)
+    {
+        alert("pawword should contain atleat a number");
+        return false;
+    }
+    else if (pw.search(/[A-Z]/)==-1)
+    {
+        alert("pawword should contain atleat a uppercase alphabet");
+        return false;
+    }
+    else if (pw.search(/[a-z]/)==-1)
+    {
+        alert("pawword should contain atleat a lowercase alphabet");
+        return false;
+    }
+     else if (pw.search(/[\@\#\$ \%\^\&\*\(\)\_\-\+\=\<\, \>\?]/)==-1){
+        alert("pawword should contain atleat a special symbol");
+        return false;
+    }
+     else{
+       alert("login successful");
+        return true;
+    }               
+   }                         
+   </script>
+</head>
+<body>
+       <div class="login" >
+               <form method ="post" ID="login" action="succ.html" onsubmit="return validateForm()" autocomplete="off">  
+                   <table cellpadding="11"><tr></tr><tr><center><h2>LOGIN HERE</h2></center></tr>          
+                   <tr><td><label>Emailid:<a style=color:red;> *</a></label></td> <td><input  name ="textfeild" placeholder="enter your emailid" id="emailid" ></td></tr>
+                   <tr><td><label>Password:<a style=color:red;> *</a></label></td><td><input type ="password" name="tesxtfeild2" value="secrets" id="password"></td></tr>
+                   <tr><td><input type="submit" id="submit" name="Submit" value="Submit" ></td>
+                   <td><input type="button" id="clear" name="Clear" value="clear" /></td></tr></table>
+                   <center><h5>DON'T HAVE AN ACCOUNT ?? CLICK<a href="sign up form.html" >SIGNUP HERE</a></h5></center>
+                   <center><h5>FORGOT PASSWORD ?? CLICK<a href="forgot password.html" >FORGOT PASSWORD</a></h5></center>
+                   <br>
+               </form>
+       </div>
+</body>
+</HTML>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout Card</title>
+    <link rel="icon" href="logo (1).ico">    
+    <link rel="stylesheet" href="buynow.css">
+    <script type="text/javascript" src="buynow.js"></script>
+</head>
+<body>
+    <center>
+        <h2 style="text-align: center; color: rgb(214, 47, 41);">Checkout Form</h2>
+    <form name="myForm" autocomplete="on" onsubmit="return validateForm()">
+        <p><label>Full name (required) <input type="text" id="firstName" 
+        autofocus="autofocus" /> </label></p> 
+        <p><label>Mobile number (required) <input type="text" id="mno"/> </label></p>
+        <p> Email address (required)
+        <input type="text" id="email" /> </p> 
+        <p> Residential address (required)
+            <input type="text" id="radd" /> </p>
+        <p> State (required)
+                <input type="text" id="state" /> </p> 
+        <p> Pincode (required)
+        <input type="text" id="postcode"/> </p> 
+        <p> Payment type (required)
+        <select id="paymentType" title="Choose a payment type">
+          <option value="0">Select a payment option</option>
+          <option value="visa">VISA</option>
+          <option value="master">Mastercard</option>
+          <option value="amer">American Express</option>
+        </select>
+        </p>
+       
+        <p> Expiry date (required)
+        <select id="exMonth" title="select a month">
+        <option value="0">Enter month</option>
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+        
+        <select id="exYear" title="select a year">
+         <option value="0">Enter year</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+            <option value="2031">2031</option>
+            <option value="2032">2032</option>
+            <option value="2033">2033</option>
+            <option value="2034">2034</option>
+            <option value="2035">2035</option>
+        </select>
+        </p>
+        <p><label>Credit card number (required)
+         <input type="text" id="cardNumber"/> </label></p> 
+       
+        <div class="centreimg">
+        <input type="submit" class="btn" name="S1" value="Buy now" />
+        </div>
+        </form> 
+    </center>
+        <div class="marq">
+            <marquee>Delivery might get delayed by 1 or 2 days if you are residing in covid restricted area. Sorry for the inconvenience caused. Kindly be patient !!</marquee>
+        </div>
+    </body>
+   
+</html>
+

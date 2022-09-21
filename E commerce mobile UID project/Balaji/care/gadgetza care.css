@@ -1,0 +1,132 @@
+html {
+    background-color: #fff;
+    color: black;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+
+
+}
+
+* {
+    margin: 0;
+
+}
+
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+.navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkblue;
+}
+
+.logo{
+    margin: 7px 10px;
+    float: left;
+}
+.navigation a {
+    position: sticky;
+    margin-bottom: 40px;
+    float: right;
+    color: white;
+    text-align: centre;
+    padding-top: 15px;
+    text-decoration: none;
+    font-size: 20px;
+ 
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-right: 40px;
+}
+
+.navigation a:hover {
+    background-color: darkblue;
+    color: antiquewhite;
+}
+
+.main h1 {
+    padding: 10;
+    margin-top: 0;
+    background-image: url(04_howtobuy_img_04.webp);
+    background-size: cover;
+    background-position-x: center;
+    position: relative;
+    height: 500px;
+    color: white;
+    font-size: 280%;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4.5px;
+    word-spacing: 6.5px;
+
+
+}
+
+.main {
+    padding: 0;
+    margin: 0;
+}
+
+#cover {
+    margin-top: 20px;
+    padding-top: 100px 0px;
+
+}
+
+#cover h2 {
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+#cover h3 {
+    font-weight: bold;
+}
+
+button {
+    color:darkblue;
+    float: right;
+    box-shadow: none;
+    font-size: 30px;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 20px;
+    background-color:white;
+}
+button :hover{
+    color:white
+    background-color:darkblue;
+}
+
+
+.care-img {
+    width: 600px;
+    height: 450px;
+}
+
+#care h1 {
+    margin-left: 0;
+    padding-right: 20px;
+}
+#care h2{
+    font-weight: bold;
+    color:darkblue;
+}
+#care button { 
+    color:white;
+   float: left;
+  padding: 5px 20px;
+    box-shadow: none;
+    font-size: 30px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    background-color:darkblue;
+}
+#care button :hover{
+    color:white
+    
+}

@@ -1,0 +1,178 @@
+html{
+    color: rgb(211, 211, 211);
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.60),rgba(0, 0, 0, 0.65)),url(Dark\ wallpapers\ to\ compliment\ your\ new\ iPhone\ 7.jpg);
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    position: relative;
+}
+.row{
+    max-width: auto;
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 220%;
+    letter-spacing: 3px;
+    word-spacing: 7px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.quotes{
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    line-height: 150%;
+    font-size: 120%;
+    margin-bottom: 10px;
+}
+
+h2{
+    text-transform: uppercase;
+    font-size: 150%;
+    margin-top: 50px;
+    margin-bottom: 40px; 
+    letter-spacing: 2.5px;
+}
+
+h3{
+    letter-spacing: 2.5px;
+    margin-top: 20px;
+}
+
+.ques{
+    margin-left: 520px;
+    word-spacing: 2px;
+    letter-spacing: 1.25px;
+    font-size: 110%;
+}
+
+
+.form input[type="text"]
+{
+    border:none;
+    border-bottom: 1px solid #fff;
+    background:transparent ;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.form input[type="textarea"]
+{
+    padding: 10px 10px;
+    border:none;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff ;
+    border-left: 1px solid #fff ;
+    border-right: 1px solid #fff ;
+    background:transparent ;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.form input[type="submit"]
+{
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    height: fit-content;
+    width: fit-content;
+    background:#fb2525 ;
+    color:#fff;
+    font-size: 80%;
+    border-radius: 20px; 
+    padding: 8px 20px;   
+    margin-bottom: 20px;
+}
+
+.form input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #ffffff;
+    color: #000;
+}
+.form a{
+    font-size: 15px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.submit-fb input[type="submit"]
+{
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    height: fit-content;
+    width: fit-content;
+    background:#fb2525 ;
+    color:#fff;
+    font-size: 80%;
+    border-radius: 20px; 
+    padding: 8px 20px;   
+    margin-bottom: 10px;
+}
+
+.suggestion input[type="textarea"]
+{
+    padding: 10px 10px;
+    border:none;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff ;
+    border-left: 1px solid #fff ;
+    border-right: 1px solid #fff ;
+    background:transparent ;
+    outline: none;
+    height: 70px;
+    width: 500px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.box p{
+    font-size: 140%;
+}
+
+footer {
+    background-color: rgb(29, 28, 28);
+    padding: 30px 50px;
+    font-size: 90%;
+}
+
+.footer-nav a{
+    list-style: none;
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    margin: 0px 50px;
+}
+
+.foot{
+    text-align: center;
+    margin: 30px 0 5px 0;
+    color: #888;
+    font-size: 85%;
+}
+
+.footer-nav a:link,
+.footer-nav a:visited{
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover,
+.footer-nav a:active {
+    color: #ddd;
+}

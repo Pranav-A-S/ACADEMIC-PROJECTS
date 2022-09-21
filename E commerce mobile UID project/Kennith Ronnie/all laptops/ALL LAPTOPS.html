@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="Resources/Css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="Resources/Css/grid.css" rel="stylesheet" type="text/css">
+    <link href="Resources/Css/Style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100&display=swap" rel="stylesheet" type="text/css">
+
+    <script>
+        filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterdiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+    </script>
+    
+    <title>LAPTOPS</title>
+
+    <style>
+        body {
+          margin: 0;
+        }
+        
+        .topnav {
+          overflow: hidden;
+          background-color: rgb(0, 0, 0);
+        }
+        
+        .topnav a {
+          font-family: Arial, Helvetica, sans-serif;
+          float: right;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 40px;
+          text-decoration: none;
+          font-size: 17px;
+          text-transform: uppercase;
+        }
+        
+        .topnav a:hover {
+          background-color: #c20c0c;
+        }
+        
+        </style>
+
+</head>
+<body>
+    
+    <div class="topnav">
+        <img src="../../logo-menubar.png" height="50" width="50">
+      <a href="../../Kennith Ronnie/Contact-us_1/contact.html">Contact Us</a>
+      <a href="../../Kennith Ronnie/ALL TABS/ALL TABS.html">Tablets</a>
+      <a href="../../Kennith Ronnie/all laptops/ALL LAPTOPS.html">Laptops</a>
+      <a href="../../Pranav/AP/all-phones.html">Phones</a>
+      <a href="../../Pranav/Homepage/homepage.html">Home</a>
+    </div>
+
+    <br><br><br>
+    <div id="myBtnContainer" align="center">
+        <img src="filter.png" style="height: 80px;width: 100px;">
+        <button class="btn active" onclick="filterSelection('all')"> SHOW ALL</button>
+        <button class="btn" onclick="filterSelection('apple')"> APPLE</button>
+        <button class="btn" onclick="filterSelection('hp')">HP</button>
+        <button class="btn" onclick="filterSelection('dell')">DELL</button>
+        <br><br>
+    </div>
+    <section class="macbook" id="b2t">
+
+        <div class="row">
+            <h2>Apple</h2>
+            <div class="container">
+            <div class="row js--wp-1">
+
+                <div class="col span-1-of-5 box">
+                    <div class="filterdiv apple">
+
+                    <img src="macbookpro.jpeg" height="160" width="260"  alt="macbook" usemap="macbookpro">
+
+                    <map name="#macbookpro">
+                        <area shape="rect"  coords="0,0,260,160" href="../../Ramya/Lap/macbookpro.html">
+                    </map>
+
+                    <div class="td-text">
+
+                        <a href="../../Ramya/Lap/macbookpro.html" >MACBOOK_PRO</a>
+                        <p> 32 GB RAM | SILVER</p>
+
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="col span-1-of-5 box">
+                    <div class="filterdiv apple">
+
+                    <img src="macbookair.jpeg"  height="160" width="260" alt="macbook" usemap="#macbookair">
+
+                    <map name="#macbookair">
+                        <area shape="rect"  coords="0,0,260,160" href="../../Ramya/Lap/macbookair.html">
+                    </map>
+
+                    <div class="td-text">
+
+                        <a href="../../Ramya/Lap/macbookair.html">MACBOOK_AIR</a>
+                        <p> 8 GB RAM | GOLD</p>
+
+                    </div>
+                    </div>
+
+                </div>
+
+                <div class="col span-1-of-5 box">
+                    <div class="filterdiv apple">
+
+                    <img src="macbooktouchb.jpeg"  height="160" width="260"  alt="macbook" usemap="#macbookprotouch">
+
+                    <map name="#macbookprotouch">
+                        <area shape="rect"  coords="0,0,260,160" href="../../Ramya/Lap/macbookpro with touchbar.html">
+                    </map>
+
+                    <div class="td-text">
+
+                        <a href="../../Ramya/Lap/macbookpro with touchbar.html">MACBOOK_PRO_WITH TOUCHBAR</a>
+                        <p> 8 GB RAM | SPACE GREY</p>
+
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="col span-1-of-5 box">
+                    <div class="filterdiv apple">
+
+                    <img src="macbookprom1.jpeg"  width=260 height="160" alt="macbook" usemap="#macbookprom1">
+
+                    <map name="#macbookprom1">
+                        <area shape="rect" coords="0,0,180,280" href="../../Ramya/Lap/macbookproM1.html">
+                    </map>
+
+                    <div class="td-text">
+
+                        <a href="../../Ramya/Lap/macbookproM1.html">MACBOOK_PRO_WITH_M1</a>
+                        <p> 16 GB RAM | SILVER</p>
+
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="col span-1-of-5 box"  >
+                    <div class="filterdiv apple">
+
+                    <img src="macbookairm1.jpeg"   height="160" width="260" usemap="#macbookairm1" >
+
+                    <map name="#macbookairm1">
+                        <area shape="rect" coords="0,0,260,160" href="../../Ramya/Lap/macbookairM1.html">
+                    </map>
+
+                    <div class="td-text">
+
+                        <a href="../../Ramya/Lap/macbookairM1.html">MACBOOK_AIR_WITH_M1_CHIP</a>
+                        <p> 8 GB RAM | SPACE GREY</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+                </div>
+
+                    
+            </div>
+        </div>
+
+    </section>
+
+    <br>
+
+    <section class="hp">
+
+        <div class="row">
+            <h2>HP</h2>
+
+            <div class="row js--wp-1">
+
+                <div class="col span-1-of-5 box">
+                    <div class="filterdiv hp">
+
+                    <img src="71VlaIUD10L._SL1500_.jpg" height="160" width="230" alt="hp" usemap="#hppav">
+
+                    <map name="#hppav">
+                        <area shape="rect" coords="0,0,230,160" href="../../Ramya/Lap/HPpaviliongaming.html">
+                    </map>
+
+                    <div class="td-text">
+
+                        <a href="../../Ramya/Lap/HPpaviliongaming.html">HP_PAVILION_GAMING</a>
+                        <p>8 GB RAM | SHADOW BLACK</p>
+
+                    </div>
+
+                </div>
+                </div>
+
+                <div class="col span-1-of-5 box">
+                    <div class="filterdiv hp">
+
+                    <img src="hpomen.jpeg" height="160" width="260" alt="hp" usemap="#hpomen">
+
+                    <map name="#hpomen">
+                        <area shape="rect"  coords="0,0,260,160" href="../../Ramya/Lap/HP omen15.html">
+                    </map>
+
+                    <div class="td-text">
+
+                        <a href="../../Ramya/Lap/HP omen15.html">HP_OMEN_15</a>
+                        <p> 8 GB RAM | SHADOW BLACK</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+                <div class="col span-1-of-5 box">
+                    <div class="filterdiv hp">
+
+                    <img src="hpspectre.jpeg" height="160" width="260" alt="hp" usemap="#hpspectre">
+
+                    <map name="#hpspectre">
+                        <area shape="rect"  coords="0,0,260,160" href="../../Ramya/Lap/HP spectre x360.html">
+                    </map>
+
+                    <div class="td-text">
+
+                        <a href="../../Ramya/Lap/HP spectre x360.html"> HP_SPECTRE_x360</a>
+                        <p> 16 GB RAM | NIGHT FALL BLACK</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+                <div class="col span-1-of-5 box">
+                    <div class="filterdiv hp">
+
+                    <img src="hpelitebook.jpeg" height="160" width="260" alt="hp" usemap="#hpelitebook">
+
+                    <map name="#hpelitebook">
+                        <area shape="rect"  coords="0,0,260,160" href="../../Ramya/Lap/HP Elite book.html">
+                    </map>
+
+                    <div class="td-text">
+
+                        <a href="../../Ramya/Lap/HP Elite book.html">HP_ELITE_BOOK </a>
+                        <p>8 GB RAM | SILVER</p>
+
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="row js--wp-3">
+
+                    <div class="col span-1-of-5 box">
+                        <div class="filterdiv hp">
+
+                        <img src="hpg4.webp" height="160" width="260" alt="hp" usemap="#hpg4">
+
+                        <map name="#hpg4">
+                            <area shape="rect"  coords="0,0,260,160" href="../../Ramya/Lap/HP G4.html">
+                        </map>
+
+                        <div class="td-text">
+
+                            <a href="../../Ramya/Lap/HP G4.html">HP_G4</a>
+                            <p>8 GB RAM | SILVER</p>
+
+                        </div>
+
+                        </div>
+                    </div>
+
+
+            </div>
+
+    </section>
+
+    <br>
+
+    <section class="dell">
+
+        <div class="row">
+            <h2>DELL</h2>
+            <div class="container">
+
+            <div class="row js--wp-1">
+
+                <div class="col span-1-of-5 box">
+                    <div class="filterdiv dell">
+
+                    <img src="dellxps.jpeg" height="160" width="260" alt="dell" usemap="#dellxps">
+
+                    <map name="#dellxps">
+                        <area shape="rect"  coords="0,0,260,160" href="../../Ramya/Lap/dellxps.html">
+                    </map>
+
+                    <div class="td-text">
+
+                        <a href="../../Ramya/Lap/dellxps.html"> DELL_XPS</a>
+                        <p> 16 GB RAM | SILVER</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+                <div class="col span-1-of-5 box">
+                    <div class="filterdiv dell">
+
+                    <img src="dellxps7390.jpeg" height="160" width="260" alt="dell" usemap="#dell7390">
+
+                    <map name="#dell7390">
+                        <area shape="rect"  coords="0,0,260,160" href="../../Ramya/Lap/dell xps7390.html">
+                    </map>
+
+                    <div class="td-text">
+
+                        <a href="../../Ramya/Lap/dell xps7390.html"> DELL_XPS_7390</a>
+                        <p>16 GB RAM | WHITE</p>
+
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="col span-1-of-5 box">
+                    <div class="filterdiv dell">
+
+                    <img src="dellinspiron13.jpeg" height="160" width="260" alt="dell" usemap="#dellinspiron">
+
+                    <map name="#dellinspiron">
+                        <area shape="rect"  coords="0,0,260,160" href="../../Ramya/Lap/Dellinspiron13.html">
+                    </map>
+
+                    <div class="td-text">
+
+                        <a href="../../Ramya/Lap/Dellinspiron13.html">DELL_INSPIRON_13</a>
+                        <p> 8 GB RAM | SILVER</p>
+
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="col span-1-of-5 box">
+                    <div class="filterdiv dell">
+
+                    <img src="dellg5 15.jpeg" height="160" width="260" alt="dell" usemap="#dellg5">
+
+                    <map name="#dellg5">
+                        <area shape="rect"  coords="0,0,260,160" href="../../Ramya/Lap/DellG515SE.html">
+                    </map>
+
+                    <div class="td-text">
+
+                        <a href="../../Ramya/Lap/DellG515SE.html">DELL_G5_15</a>
+                        <p> 8 GB RAM | SILVER</p>
+
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="row js--wp-3">
+
+                    <div class="col span-1-of-5 box">
+                        <div class="filterdiv dell">
+
+                        <img src="dell g7.jpeg" height="160" width="260" alt="dell" usemap="#dellg7">
+
+                        <map name="#dellg7">
+                            <area shape="rect"  coords="0,0,260,160" href="../../Ramya/Lap/Dell G7.html">
+                        </map>
+
+                        <div class="td-text">
+
+                            <a href="../../Ramya/Lap/Dell G7.html">DELL_G7</a>
+                            <p> 16 GB RAM | BLACK</p>
+
+                        </div>
+                    </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            </div>
+        </div>
+    </div>
+    
+
+    </section>
+
+    <br>
+
+    <center>
+
+        <a href="#b2t" class="back2top">Back to top</a>
+
+    </center>
+
+    <center>
+
+        <a href="../../Pranav/Homepage/homepage.html" class="back2home">Back to home</a>
+
+    </center>
+
+    <footer>
+
+        <div class="row">
+
+                <center>
+                    <div class="footer-nav">
+
+                        <a href="../../Kennith Ronnie/about_us/ABOUT US.html" class="about us">About us</a>
+                        <a href="../../Kennith Ronnie/Contact-us_1/contact.html" class="contact us">Contact us</a>
+                        <a href="../../Kennith Ronnie/privacy policy/PRIVACY POLICY.html" class="privacy policy">Privacy Policy</a> 
+                        <a href="../../Kennith Ronnie/return policy/RETURN POLICY.html" class="return policy">Return Policy</a>
+
+                        <p class="foot">
+                            Copyright ©2021 by Gadgetza | All rights reserved.
+                        </p>
+
+                </center>
+
+            </div>
+            
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
